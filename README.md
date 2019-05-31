@@ -4,6 +4,7 @@ Uses python to create a class for easier Reverse Polish Notation calculations.
 Currently only supports basic functions: add, subtract, multiply, divide, power.  
 
 ## Use
+**In python**
 * Import this local file  
 > from RPNpython import *
 * Create an instance of the class RPN

@@ -19,8 +19,8 @@ class RPN():
     def add(self):
         try:
             a = self.stack[-1] + self.stack[-2]
-            self.stack.pop(-1)
-            self.stack.pop(-1)#original [-2] is [-1] after previous pop()
+            for i in range(2):
+                self.stack.pop(-1)
             self.stack.append(a)
         except:
             pass
@@ -29,8 +29,8 @@ class RPN():
     def subtract(self):
         try:
             a = self.stack[-1] - self.stack[-2]
-            self.stack.pop(-1)
-            self.stack.pop(-1)#original [-2] is [-1] after previous pop()
+            for i in range(2):
+                self.stack.pop(-1)
             self.stack.append(a)
         except:
             pass
@@ -39,8 +39,8 @@ class RPN():
     def multiply(self):
         try:
             a = self.stack[-1] * self.stack[-2]
-            self.stack.pop(-1)
-            self.stack.pop(-1)#original [-2] is [-1] after previous pop()
+            for i in range(2):
+                self.stack.pop(-1)
             self.stack.append(a)
         except:
             pass
@@ -49,8 +49,8 @@ class RPN():
     def divide(self):
         try:
             a = self.stack[-1] / self.stack[-2]
-            self.stack.pop(-1)
-            self.stack.pop(-1)#original [-2] is [-1] after previous pop()
+            for i in range(2):
+                self.stack.pop(-1)
             self.stack.append(a)
         except:
             pass
@@ -59,8 +59,8 @@ class RPN():
     def power(self):
         try:
             a = self.stack[-2] ** self.stack[-1]
-            self.stack.pop(-1)
-            self.stack.pop(-1)#original [-2] is [-1] after previous pop()
+            for i in range(2):
+                self.stack.pop(-1)
             self.stack.append(a)
         except:
             pass
